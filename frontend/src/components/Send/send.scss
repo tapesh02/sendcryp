@@ -1,0 +1,203 @@
+/* Using SCSS variables to store breakpoints */
+$breakpoint-smallMobile: 320px;
+$breakpoint-mediumMobile: 375px;
+$breakpoint-largeMobile: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-largelaptop: 1440px;
+$breakpoint-4kdesktop: 2560px;
+$font-color: white;
+
+.maintags {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 40%;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+
+    .tags {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        color: inherit;
+        background: #442e5028;
+        display: inherit;
+        justify-content: center;
+        align-items: inherit;
+        opacity: 0.8;
+        box-shadow: 0px 0.5px 4px #2d34491a;
+    }
+}
+
+.mainimgform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    height: inherit;
+    gap: 10px;
+
+    .cardImg {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+    }
+    .frominputs {
+        padding: 5%;
+        background: #2d344960;
+        border-radius: 15px;
+
+        .MuiOutlinedInput-root,
+        fieldset {
+            border-color: #ffffff56;
+            color: $font-color;
+
+            .Mui-focused,
+            fieldset {
+                border-color: #ffffff56;
+            }
+        }
+    }
+}
+
+.recentTitle {
+    margin-left: 6% !important;
+    margin-top: 7% !important;
+    width: fit-content !important;
+    padding: 5px !important;
+    border-radius: 2px !important;
+    font-weight: 400;
+    color: white;
+    border: solid white 1px;
+    font-size: large;
+    box-sizing: border-box;
+    --c: 5px;
+    clip-path: polygon(0% 0%, 50% 0%, 50% var(--c), 100% var(--c), 100% 100%, 100% 100%, 50% 100%, 50% calc(100% - var(--c)), 0% calc(100% - var(--c)));
+}
+
+.datatable {
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    .MuiDataGrid-root {
+        background: #2625251f !important;
+        border-radius: 15px !important;
+        box-shadow: 0px 3px 6px #00000036 !important;
+        outline: none !important;
+        border: none !important;
+        color: $font-color;
+
+        .MuiDataGrid-overlay {
+            background-color: transparent !important;
+        }
+        .MuiDataGrid-footerContainer {
+            border-top: none !important;
+        }
+
+        .MuiTablePagination-root {
+            color: $font-color;
+        }
+    }
+
+    .MuiDataGrid-cell {
+        border: none !important;
+        .MuiDataGrid-cell:focus {
+            outline: none !important;
+        }
+    }
+    .MuiButtonBase-root {
+        color: inherit !important;
+    }
+}
+
+@media (max-width: $breakpoint-largelaptop) {
+    .cimg {
+        width: 350px;
+        height: 195px;
+    }
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .maintags {
+        width: auto;
+        margin-top: 5%;
+    }
+
+    .mainimgform {
+        width: 70%;
+
+        .cardImg {
+            .cimg {
+                width: 300px;
+                height: 195px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .maintags {
+        width: auto;
+        margin-top: 5%;
+
+        .tags {
+            width: 60px;
+            height: 60px;
+
+            display: block;
+            line-height: 50px;
+        }
+    }
+
+    .mainimgform {
+        width: 70%;
+        height: fit-content;
+
+        .cardImg {
+            .cimg {
+                width: 320px;
+                height: 195px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-largeMobile) {
+    .sendmain {
+        flex-direction: column !important;
+        width: auto !important;
+        height: 100% !important;
+        align-items: stretch !important;
+
+        .maintitle {
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                justify-content: center;
+                align-items: center;
+            }
+
+            .subtitle {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .mainimgform {
+            width: auto !important;
+        }
+    }
+    .datatable {
+        width: 100% !important;
+        display: flex;
+        margin-bottom: 8% !important;
+    }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="40" viewBox="0 0 148 40">
+  <g id="Logo_title" transform="translate(-67 -48)">
+    <g id="Logo" transform="translate(10 12)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="20" cy="20" r="20" transform="translate(57 36)" fill="#fff"/>
+      <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M15.852,11.481a.716.716,0,0,1,.008,1.15l-4.638,3.806H28.9a.912.912,0,0,1,.986.812.912.912,0,0,1-.986.812H11.221l4.646,3.806a.72.72,0,0,1-.008,1.15,1.151,1.151,0,0,1-1.4-.006l-6.3-5.187h0a.921.921,0,0,1-.206-.256.655.655,0,0,1-.076-.312.745.745,0,0,1,.283-.569l6.3-5.187A1.131,1.131,0,0,1,15.852,11.481Z" transform="translate(58.118 33.65)"/>
+      <path id="Icon_ionic-ios-arrow-round-forward" data-name="Icon ionic-ios-arrow-round-forward" d="M21.9,11.481a.716.716,0,0,0-.008,1.15l4.646,3.806H8.861a.912.912,0,0,0-.986.812.912.912,0,0,0,.986.812H26.536L21.89,21.868a.72.72,0,0,0,.008,1.15,1.151,1.151,0,0,0,1.4-.006l6.3-5.187h0a.921.921,0,0,0,.206-.256.655.655,0,0,0,.076-.312.745.745,0,0,0-.283-.569L23.3,11.5A1.131,1.131,0,0,0,21.9,11.481Z" transform="translate(58.125 43.847)"/>
+    </g>
+    <text id="SendCryp." transform="translate(112 75)" fill="#fff" font-size="20" font-family="Roboto"><tspan x="0" y="0">SendCryp.</tspan></text>
+  </g>
+</svg>
+
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="219" height="60" viewBox="0 0 219 60">
+  <g id="Logo_title" transform="translate(-67 -48)">
+    <g id="Logo" transform="translate(10 12)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="30" cy="30" r="30" transform="translate(57 36)" fill="#fff"/>
+      <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M15.216,11.575a1.361,1.361,0,0,1,.007,1.618l-4.268,5.354H27.218a1.046,1.046,0,0,1,.907,1.143,1.046,1.046,0,0,1-.907,1.143H10.955l4.275,5.354a1.372,1.372,0,0,1-.007,1.618.788.788,0,0,1-1.287-.009L8.142,20.5h0a1.347,1.347,0,0,1-.19-.36,1.331,1.331,0,0,1-.07-.44,1.31,1.31,0,0,1,.26-.8l5.794-7.3A.777.777,0,0,1,15.216,11.575Z" transform="translate(69.077 39.395)"/>
+      <path id="Icon_ionic-ios-arrow-round-forward" data-name="Icon ionic-ios-arrow-round-forward" d="M20.784,11.575a1.361,1.361,0,0,0-.007,1.617l4.275,5.352H8.782a1.046,1.046,0,0,0-.907,1.143,1.046,1.046,0,0,0,.907,1.143H25.045L20.77,26.182a1.372,1.372,0,0,0,.007,1.617.788.788,0,0,0,1.287-.009L27.858,20.5h0a1.346,1.346,0,0,0,.19-.36,1.33,1.33,0,0,0,.07-.439,1.309,1.309,0,0,0-.26-.8L22.064,11.6A.777.777,0,0,0,20.784,11.575Z" transform="translate(69.084 52.075)"/>
+    </g>
+    <text id="SendCryp." transform="translate(132 89)" fill="#fff" font-size="30" font-family="Roboto"><tspan x="0" y="0">SendCryp.</tspan></text>
+  </g>
+</svg> -->

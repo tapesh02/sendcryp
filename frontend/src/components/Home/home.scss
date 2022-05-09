@@ -1,0 +1,119 @@
+/* Using SCSS variables to store breakpoints */
+$breakpoint-smallMobile: 320px;
+$breakpoint-mediumMobile: 375px;
+$breakpoint-largeMobile: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1028px;
+$breakpoint-mediumlaptop: 1280px;
+$breakpoint-largelaptop: 1440px;
+$breakpoint-4kdesktop: 2560px;
+$font-color: white;
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 85vh;
+    width: 90%;
+    gap: 2%;
+    margin-top: 1%;
+
+    .maintitle {
+        width: 60%;
+
+        .title {
+            font-size: 5rem;
+            width: 75%;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            border: 1px solid white;
+        }
+    }
+
+    .homeimage {
+        width: 40%;
+        background-color: #3705391a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95%;
+        border-radius: 30% 70% 70% 30% / 70% 70% 30% 30%;
+
+        img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-largelaptop) {
+    .title {
+        font-size: 4.5rem !important;
+    }
+    .subtitle {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: $breakpoint-laptop) {
+    .maintitle {
+        width: 60%;
+        .title {
+            font-size: 3rem !important;
+        }
+        .subtitle {
+            font-size: 1rem !important;
+            width: 75%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .maintitle {
+        width: 60%;
+        .title {
+            font-size: 3rem !important;
+            margin-bottom: 20%;
+        }
+        .subtitle {
+            font-size: 1.1rem !important;
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-largeMobile) {
+    .main {
+        flex-direction: column-reverse;
+        width: 98%;
+        align-items: stretch;
+        padding: 2.5%;
+    }
+    .maintitle {
+        width: inherit !important;
+        .title {
+            font-size: 2rem !important;
+            margin-bottom: 20%;
+        }
+        .subtitle {
+            font-size: 1rem !important;
+            width: 70% !important;
+        }
+    }
+
+    .homeimage {
+        width: auto !important;
+        img {
+            width: inherit;
+            height: inherit;
+            object-fit: contain;
+        }
+    }
+}
