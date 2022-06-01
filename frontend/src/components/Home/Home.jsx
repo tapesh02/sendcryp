@@ -2,8 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 
-import "../Home/home.scss";
-import homeImg from "../assets/homeImg.png";
+import homeImg from "../../assets/homeImg.png";
 
 const Home = () => {
     return (

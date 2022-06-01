@@ -1,13 +1,3 @@
-/* Using SCSS variables to store breakpoints */
-$breakpoint-smallMobile: 320px;
-$breakpoint-mediumMobile: 375px;
-$breakpoint-largeMobile: 425px;
-$breakpoint-tablet: 768px;
-$breakpoint-laptop: 1024px;
-$breakpoint-largelaptop: 1440px;
-$breakpoint-4kdesktop: 2560px;
-$font-color: white;
-
 .maintags {
     display: flex;
     gap: 10px;
@@ -16,6 +6,7 @@ $font-color: white;
     align-items: center;
     margin-top: 2%;
     margin-bottom: 3%;
+    scroll-behavior: smooth;
 
     .tags {
         width: 60px;
@@ -114,90 +105,5 @@ $font-color: white;
     }
     .MuiButtonBase-root {
         color: inherit !important;
-    }
-}
-
-@media (max-width: $breakpoint-largelaptop) {
-    .cimg {
-        width: 350px;
-        height: 195px;
-    }
-}
-
-@media (max-width: $breakpoint-laptop) {
-    .maintags {
-        width: auto;
-        margin-top: 5%;
-    }
-
-    .mainimgform {
-        width: 70%;
-
-        .cardImg {
-            .cimg {
-                width: 300px;
-                height: 195px;
-            }
-        }
-    }
-}
-
-@media (max-width: $breakpoint-tablet) {
-    .maintags {
-        width: auto;
-        margin-top: 5%;
-
-        .tags {
-            width: 60px;
-            height: 60px;
-
-            display: block;
-            line-height: 50px;
-        }
-    }
-
-    .mainimgform {
-        width: 70%;
-        height: fit-content;
-
-        .cardImg {
-            .cimg {
-                width: 320px;
-                height: 195px;
-            }
-        }
-    }
-}
-
-@media (max-width: $breakpoint-largeMobile) {
-    .sendmain {
-        flex-direction: column !important;
-        width: auto !important;
-        height: 100% !important;
-        align-items: stretch !important;
-
-        .maintitle {
-            justify-content: center;
-            align-items: center;
-
-            .title {
-                justify-content: center;
-                align-items: center;
-            }
-
-            .subtitle {
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        .mainimgform {
-            width: auto !important;
-        }
-    }
-    .datatable {
-        width: 100% !important;
-        display: flex;
-        margin-bottom: 8% !important;
     }
 }

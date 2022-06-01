@@ -1,16 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { TransactionContext } from "../../context/TransactionContext";
 
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, Button, CircularProgress, Divider, Paper, TextField } from "@mui/material";
 
-import card from "../assets/card.png";
-import "../Send/send.scss";
+import card from "../../assets/card.png";
 
 const Send = () => {
-    const { connectWallet, currentAccount, transactionDetails, handleChange, sendTransaction, isLoading } = useContext(TransactionContext);
-
-    const [storeData, setStoreData] = useState([]);
+    const { connectWallet, currentAccount, transactionDetails, handleChange, sendTransaction, isLoading, storeData } = useContext(TransactionContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,22 +17,7 @@ const Send = () => {
             sendTransaction();
         }
     };
-    const getTransactions = async () => {
-        const activeApi = `https://api-ropsten.etherscan.io/api?module=account&action=txlist&address=${currentAccount}&startblock=0&endblock=99999999&page=1&offset=10&sort=desc&apikey=${process.env.REACT_APP_ETHER_API}`;
 
-        const nonActiveApi = `https://api-ropsten.etherscan.io/api?module=account&action=txlist&address=0x1671363cdf39196333f56818963f108066f776f9&startblock=0&endblock=99999999&page=1&offset=10&sort=desc&apikey=${process.env.REACT_APP_ETHER_API}`;
-        try {
-            const response = await fetch(currentAccount ? activeApi : nonActiveApi);
-            const responseJson = await response.json();
-            setStoreData(responseJson.result);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        getTransactions();
-    }, []);
     const columns = [
         { field: "id", headerName: "ID", width: 70, align: "left", flex: 7 },
         { field: "addressTo", headerName: "Address To", width: 130, align: "left", flex: 7 },
@@ -64,6 +46,7 @@ const Send = () => {
             addressFrom: `${row.from}`.slice(0, 5).concat("....", `${row.from}`.slice(`${row.from}`.length - 5)),
             amount: row.value / 10 ** 18, //convert wei to eth
             timestamp: new Date(row.timeStamp * 1000).toLocaleString(),
+            // eslint-disable-next-line
             status: `${row.isError}` == 0 ? "success " : "failed",
             gasPrice: `${row.gasPrice}`,
         };

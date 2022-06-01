@@ -23,6 +23,7 @@ export const TransactionProvider = ({ children }) => {
         keyword: "",
     });
     const [isLoading, setIsLoading] = useState(false);
+    const [storeData, setStoreData] = useState([]);
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -102,7 +103,26 @@ export const TransactionProvider = ({ children }) => {
 
     useEffect(() => {
         IfWalletConnect();
-    }, []);
 
-    return <TransactionContext.Provider value={{ connectWallet, currentAccount, transactionDetails, handleChange, sendTransaction, isLoading }}> {children} </TransactionContext.Provider>;
+        const getTransactions = async () => {
+            const activeApi = `https://api-ropsten.etherscan.io/api?module=account&action=txlist&address=${currentAccount}&startblock=0&endblock=99999999&page=1&offset=10&sort=desc&apikey=${process.env.REACT_APP_ETHER_API}`;
+
+            const nonActiveApi = `https://api-ropsten.etherscan.io/api?module=account&action=txlist&address=0x1671363cdf39196333f56818963f108066f776f9&startblock=0&endblock=99999999&page=1&offset=10&sort=desc&apikey=${process.env.REACT_APP_ETHER_API}`;
+            try {
+                const response = await fetch(currentAccount ? activeApi : nonActiveApi);
+                const responseJson = await response.json();
+                setStoreData(responseJson.result);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        getTransactions();
+    }, [currentAccount]);
+
+    return (
+        <TransactionContext.Provider value={{ connectWallet, currentAccount, transactionDetails, handleChange, sendTransaction, isLoading, storeData, setStoreData }}>
+            {" "}
+            {children}{" "}
+        </TransactionContext.Provider>
+    );
 };

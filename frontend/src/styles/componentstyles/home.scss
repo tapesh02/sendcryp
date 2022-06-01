@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 85vh;
+    width: 90%;
+    gap: 2%;
+    margin-top: 1%;
+
+    .maintitle {
+        width: 60%;
+
+        .title {
+            font-size: 5rem;
+            width: 75%;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            border: 1px solid white;
+        }
+    }
+
+    .homeimage {
+        width: 40%;
+        background-color: #3705391a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95%;
+        border-radius: 30% 70% 70% 30% / 70% 70% 30% 30%;
+
+        img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+    }
+}
