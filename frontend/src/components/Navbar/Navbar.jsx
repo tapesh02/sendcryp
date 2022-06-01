@@ -1,9 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-import { AppBar, Button, Stack, Toolbar } from "@mui/material";
+import { AppBar, Stack, Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
 
-import logo from "../../logo.svg";
+import logo from "../../assets/logo.svg";
 
 const Navbar = () => {
     return (
@@ -14,18 +15,18 @@ const Navbar = () => {
                         <img src={logo} alt="logoimg" />
                     </Box>
                     <Stack spacing={2} direction="row">
-                        <Button href="/home" color="inherit">
+                        <NavLink to="/home" className={(navlink) => (navlink.isActive ? "active" : "inactive")}>
                             Home
-                        </Button>
-                        <Button href="/send" color="inherit">
+                        </NavLink>
+                        <NavLink to="/send" className={(navlink) => (navlink.isActive ? "active" : "inactive")}>
                             Send
-                        </Button>
-                        <Button href="/contact" color="inherit">
+                        </NavLink>
+                        <NavLink to="/contact" className={(navlink) => (navlink.isActive ? "active" : "inactive")}>
                             Contact
-                        </Button>
-                        <Button href="/projects" color="inherit">
-                            Projects
-                        </Button>
+                        </NavLink>
+                        <NavLink to="/market" className={(navlink) => (navlink.isActive ? "active" : "inactive")}>
+                            Market
+                        </NavLink>
                     </Stack>
                 </Toolbar>
             </AppBar>
